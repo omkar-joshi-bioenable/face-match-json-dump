@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cityairapp",
+  "private_key_id": "c2dfb5961ee9bf8f8f16e80f4dfb71f78ee4abd3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCdPDCFYMxaWOSr\noGAkfOhGROBMhNK6deg27SQMfr5M7JxWrGDpGMNkz+K7s7YXyCNTwjY9j0UCa+ZH\njQnU24yyQZC4dHuy0Mgx0rCj5eXQSg6pLIiG+W1+msRjW4C34amTx0RVkVlvW/26\ntqQ8Y1u6+fZLgO1wsx4DrEv00zLMjkrhINCG8ZwQfJGQ2jp16t0u8zWU8NC1Qnnv\nQL+VqFQ3WXIVPF5CZwS2y7jEJ4DcQDKZM+o+uSfpoAA0Pz94EaZk3MX7Jhkd7JM5\nqmdoYyKTenk5nRjsTw6h8dDfXE8kaoaN3U+INftbVfgZm5luzSunSbzS8ZsZ42Ef\nVviteCjJAgMBAAECggEAJYnGYr1wpDw3QbM86NEqSgZtD0+hmLMIEL7uXY5PxAE0\nNOwcCeJn2bRY4uuddFGLf5ZtCSbgeJrGhDwLhhYxYahOEv96Pb9jICP3GHYNNvxL\nQj/Xy3OWnMR50Oe6VAwrxlRrP8t+8NtjONWcYa9t6bZ+AtohtceJiaJzktxuMxAA\nxrAtkiUbANzb+CBCY08B0P1Fj/BxJA+enG4+IuuJotBDxyL1SwMqlATVPfWfxwfy\nJMYLU23xtGWISjbSXVC1Lwbo+AT5nQ0Gx52sG8OkZX1pFPPqrdsLC/TuKhCHBJqh\nYOjx59/Wsnvf/Xtvus+Tksg0xI5SPETVzATjzG4C1QKBgQDMwjjLS4OunxiFLljS\nDnI+3gLTvXAb3nxsh5UtnBAubK+7Z8fEZvvfw14hP2AqIb4R4T8IK7/UUWwbug42\n/tf5lTk0LqnXMlclWhHxF5nI9jTJ2D2FD7OWjf/i8LTr3+sLRhZEIlk8ul5wh5Tz\nYSAc6D3scCkykpyTc7mPXGmGZQKBgQDElWQDgkXb+BdVwVSSg512iWblzdU4wWi8\nAi9MLFAaEiYny86GvSdwHR19GQwDaoQjL4RYajwiKgoNbT5Ub08Tg5eTkSaB6zaZ\nae5Kz4uJbeyp6edrOQ9P0/iR/+/ZN55tDqla5Pf3H+y6JqhEOwzgw46y8VVHN/D/\nSi14rNIwlQKBgQCl1S9WRwSRarzbMFwzVAvnKruzbZvclmbDJ1QEqn7YeqIg7751\nLMsVwQ79cmyZ8tYTeRApt/UXKhKaqidVFzUoKFk6EAjyBw1ZbQdW8bxVbEH4r6+z\nkrHqX3s8+6Ir3yBn8w2ZhRAtBOvzy3sxWho+D0IHuhdDpEY3jeRdXYUBmQKBgQC4\ns8Rsp5ILw2XpZOSZZKAmJ6NOd77GvLIzM7pMz7XTSQogihVZ84+Cf1idmVL4QrQ0\newjWKbqmPumDBAl0O8EIjLN2KwMLPnzmV+lU0PxB+85JN0QAMnR4hKkgRGCOrvtj\nbEsi4883mf9KR9gBg5nt9M+2wZlmeOEue/uNTpOOoQKBgF/cKz7zOmjwrshmD4Ax\n3msYvDbBA1kd3ldDcNtyLQV8yNO2SmID4OhqGIhVhjz07rVvfbQzxEn3EfxZEYdZ\np/0Pm/0/hbcqX1ZI2wFD9vcfDg94FslvI12ne4j9jVgAiTV5uW0P4tOtdDJsn+lT\nPim8qolRdzBQeSXdSiNYNHDn\n-----END PRIVATE KEY-----\n",
+  "client_email": "cityair@cityairapp.iam.gserviceaccount.com",
+  "client_id": "115494126038659208239",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cityair%40cityairapp.iam.gserviceaccount.com"
+}
