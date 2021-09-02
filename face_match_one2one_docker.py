@@ -229,7 +229,7 @@ async def face_matching(request: Request):
                 img1_representation = facerec.compute_face_descriptor(img1_aligned)            
                 img1_representation = np.array(img1_representation)
                 name,distance = image_search(img1_representation)
-                save_json_data = {'status':'success','transaction_id':timestamp,'datetime':str(datetime.now()),'distance': distance,'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"message":"",face_result":[[img1_detection[0].left(),img1_detection[0].top()],[img1_detection[0].right(),img1_detection[0].bottom()]]}
+                save_json_data = {'status':'success','transaction_id':timestamp,'datetime':str(datetime.now()),'distance': distance,'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"message":"","face_result":[[img1_detection[0].left(),img1_detection[0].top()],[img1_detection[0].right(),img1_detection[0].bottom()]]}
                 destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
                 upload_json(output_bucket, destination_jsonfile_name, save_json_data)
                 return ("Run successfully", 204)                
