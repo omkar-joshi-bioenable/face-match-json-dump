@@ -20,7 +20,7 @@ from fastapi import Request, FastAPI
 import uvicorn
 from starlette.responses import Response
 from collections import Counter ,defaultdict
-tf.get_logger().setLevel('ERROR')
+#tf.get_logger().setLevel('ERROR')
 
 storage_client=storage.Client()
 
