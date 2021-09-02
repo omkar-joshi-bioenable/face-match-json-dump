@@ -273,5 +273,5 @@ async def face_matching(request: Request):
             
 if __name__ == '__main__':
     PORT = int(os.getenv("PORT")) if os.getenv("PORT") else 8000
-    uvicorn.run(app,host = '0.0.0.0',port=PORT)    
+    uvicorn.run(app,host = '0.0.0.0')    
 
