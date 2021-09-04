@@ -236,10 +236,10 @@ async def face_matching(request: Request):
 
             else:
 		result=[[i.left(),i.top(),i.right(),i.bottom()] for i in img1_detection]
-                save_json_data = {'status':'failure','transaction_id':timestamp,'datetime':str(datetime.now()),'distance': "Null",'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"message":"invalied number of faces : "+str(len(img1_detection)),"face_result":result}
-                destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
-                upload_json(output_bucket, destination_jsonfile_name, save_json_data)          
-                return ("Run successfully", 204)            
+		save_json_data = {'status':'failure','transaction_id':timestamp,'datetime':str(datetime.now()),'distance': "Null",'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"message":"invalied number of faces : "+str(len(img1_detection)),"face_result":result}
+		destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
+		upload_json(output_bucket, destination_jsonfile_name, save_json_data)          
+		return ("Run successfully", 204)            
             '''
             result = detector.detect_faces(image_array)
             if len(result) == 1:
