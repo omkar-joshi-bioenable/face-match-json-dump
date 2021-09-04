@@ -224,7 +224,7 @@ async def face_matching(request: Request):
           try:
             img1_detection = detector(image_array, 1)
             if len(img1_detection)==1:
-                img1_shape = sp(img1, img1_detection[0])
+                img1_shape = sp(image_array, img1_detection[0])
                 img1_aligned = dlib.get_face_chip(image_array, img1_shape)            
                 img1_representation = facerec.compute_face_descriptor(img1_aligned)            
                 img1_representation = np.array(img1_representation)
