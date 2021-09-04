@@ -233,33 +233,12 @@ async def face_matching(request: Request):
                 destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
                 upload_json(output_bucket, destination_jsonfile_name, save_json_data)
                 return ("Run successfully", 204)                
-
             else:
-		result=[[i.left(),i.top(),i.right(),i.bottom()] for i in img1_detection]
+	        result = [ [i.left(),i.top(),i.right(),i.bottom()] for i in img1_detection]
 		save_json_data = {'status':'failure','transaction_id':timestamp,'datetime':str(datetime.now()),'distance': "Null",'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"message":"invalied number of faces : "+str(len(img1_detection)),"face_result":result}
 		destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
 		upload_json(output_bucket, destination_jsonfile_name, save_json_data)          
 		return ("Run successfully", 204)            
-            '''
-            result = detector.detect_faces(image_array)
-            if len(result) == 1:
-              for person in result:
-                  bounding_box = person['box']
-                  face_array=image_array[int(bounding_box[1]):int(bounding_box[1] + bounding_box[3]),int(bounding_box[0]):int(bounding_box[0]+bounding_box[2])]
-                  name,distance = image_search(face_array)
-                  output = name + ' (' + str(round(distance, 2))+')'
-                  prediction_time=time.time()
-                  print("Time taken for prediction =",prediction_time-image_array_time)
-                  print("Time taken for gcloud function =",prediction_time-start)          
-                  save_json_data = {'status':'Success','transaction_id':timestamp,'datetime':str(datetime.now()),'message': output,'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"face_result":result}
-                  destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
-
-                  upload_json(output_bucket, destination_jsonfile_name, save_json_data)          
-            else:
-              save_json_data = {'status':'Failure','transaction_id':timestamp,'datetime':str(datetime.now()),'message': 'Invalid no of faces : '+str(len(result)),'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"face_result":result}
-              destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
-              upload_json(output_bucket, destination_jsonfile_name, save_json_data)          
-            '''
           except Exception as e:
             print("Exception occured in mtcnn face detection",e)
             return ("Exception occured in mtcnn face detection", str(e))
