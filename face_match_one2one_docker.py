@@ -217,13 +217,14 @@ async def face_matching(request: Request):
         print('Image file present-confirmed ', os.path.isfile(download_image_path))
        
         # extracting face from image and saving it for further operations
-        image_array = cv2.imread(download_image_path)
+        #image_array = cv2.imread(download_image_path)
+        image_array=dlib.load_rgb_image(download_image_path)	
         try:
           image_array_time=time.time()
           print("Time taken for getting image_array=",image_array_time-start)
           try:
             img1_detection = detector(image_array, 1)
-            if len(img1_detection)==1:
+            if len(img1_detection)==1:		
                 img1_shape = sp(image_array, img1_detection[0])
                 img1_aligned = dlib.get_face_chip(image_array, img1_shape)            
                 img1_representation = facerec.compute_face_descriptor(img1_aligned)            
