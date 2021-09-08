@@ -96,12 +96,13 @@ def image_search(features):
         num_features = len(distances)
         print('filenames : ',filenames)
         if len(distances) > 0 :
-            name = filenames[indices[0]].split('/')[-3]
-            name2 = filenames[indices[0]]
+            #name = filenames[indices[0]].split('/')[-3]
+            #name2 = filenames[indices[0]]
+            name=""
             distance = distances[0]
-            end = time.time()
-            time_taken = end - start
-            print("Complete Name :",name2)
+            #end = time.time()
+            #time_taken = end - start
+            #print("Complete Name :",name2)
             print(name,distance)
             return (name,distance)
         else:
@@ -233,8 +234,8 @@ async def face_matching(request: Request):
                 save_json_data = {'status':'success','transaction_id':timestamp,'datetime':str(datetime.now()),'distance': distance,'InputFilePath':file_name_with_path,"InputBucket":bucket_name,"message":"","face_result":[[img1_detection[0].left(),img1_detection[0].top()],[img1_detection[0].right(),img1_detection[0].bottom()]]}
                 destination_jsonfile_name=file_name_with_path.split(".")[0]+".json"
                 cv2.imwrite("cropped_image.jpg",image_array[img1_detection[0].top():img1_detection[0].bottom(),img1_detection[0].left():img1_detection[0].right()])				
-                output_bucket.blob(destination_jsonfile_name.repalce("json","jpg")).upload_from_filename("cropped_image.jpg")
-		upload_json(output_bucket, destination_jsonfile_name, save_json_data)
+                output_bucket.blob(destination_jsonfile_name.replace("json","jpg")).upload_from_filename("cropped_image.jpg")
+                upload_json(output_bucket, destination_jsonfile_name, save_json_data)
                 return ("Run successfully", 204)                
             else:
                 result = [ [i.left(),i.top(),i.right(),i.bottom()] for i in img1_detection]
